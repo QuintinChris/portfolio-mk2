@@ -1,0 +1,222 @@
+extends layout
+
+block content
+  div.container-fluid(id='home')
+   div(id="jumbos")
+    div.jumbotron
+     div.row
+      div.col-lg-6(id='intro')
+       h1.display-1(id='name') Hi, I'm Chris
+       p.lead Software engineer with a passion for programming, sports, and cooking!
+       hr.my-4(id='line1')
+       h5(id='connect') Let's Connect!
+       div(id='icons')
+        a(href='', id='icon', class='fab fa-linkedin fa-2x')
+        a(href='', id='icon', class='fab fa-github fa-2x')
+        a(href='', id='icon', class='fab fa-codepen fa-2x')
+      div.col-lg-6(id='favs')
+       h3.display-4(id='favHeader') My Favorite Projects:
+       hr
+       div.container(id='cardrow')
+        div.card
+         h6.card-header New!
+         h5.card-title Odin Book
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          a.btn.btn-primary(href='#') See Demo
+          a.btn.btn-primary(href='#') View Code
+        div.card
+         h5.card-title Vue Reddit Clone
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          a.btn.btn-primary(href='#') See Demo
+          a.btn.btn-primary(href='#') View Code
+        div.card
+         h5.card-title React Monopoly
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          a.btn.btn-primary(href='#') See Demo
+          a.btn.btn-primary(href='#') View Code
+   div(id='work')
+   div.container-fluid
+    h1.display-5(id='header') Work and Education
+    hr.my-4(width='75%')
+    div.timeline
+     div(class='containerT left')
+      div.content
+       div.card
+        h3.card-header 2020
+        h5.card-title Searching for Employment!
+        div.card-body
+         p Hire me to work with your team and we can build quality projects together!
+         a.btn.btn-primary(href='#') See my resume
+         a.btn.btn-primary(data-toggle="modal", data-target="#modal") Contact me!
+     div(class='containerT right')
+      div.content
+       div.card
+        h3.card-header May 2020
+        h5.card-title Bachelor's of Applied Science - EFSC
+        div.card-body
+         p I graduated in May 2020 from Eastern Florida State College with a Bachelor's Degree specializing in Software Programming. My coursework included...
+         a.btn.btn-primary(href='#') See some projects
+     div(class='containerT left')
+      div.content
+       div.card
+        h3.card-header January - May 2020
+        h5.card-title IRI, The CoSort Company
+        div.card-body
+         p At IRI, my task was to complete a series of dashboards that can read data from numerious proprietary programs and transform that data into a graphical user interface. This enabled users to gain a better understanding of their data, faster than they could before.
+         a.btn.btn-primary(disabled) View Code
+         a.btn.btn-primary(href='') View blog post
+   div(id='portfolio')
+   div.container-fluid
+    h1.display-5(id='header') Projects
+    hr.my-4(width='75%')
+    nav
+     div.nav.nav-tabs(id='nav-tab', role='tablist')
+      a.nav-item.nav-link(id='nav-java-tab', data-toggle="tab", href="#nav-java", role="tab", aria-controls="nav-java", aria-selected="false") Java
+      a.nav-item.nav-link.active(id='nav-js-tab', data-toggle="tab", href="#nav-js", role="tab", aria-controls="nav-js", aria-selected="true") JavaScript
+      a.nav-item.nav-link(id='nav-cpp-tab', data-toggle="tab", href="#nav-cpp", role="tab", aria-controls="nav-cpp", aria-selected="false") C++
+    div.tab-content(id='nav-tabContent')
+     div(class='tab-pane fade', id='nav-java', role='tabpanel', aria-labelledby='nav-java-tab')
+      div.row
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title Java 1
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+     div(class='tab-pane fade show active', id='nav-js', role='tabpanel', aria-labelledby='nav-js-tab')
+      div.row
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title JS 1
+          p.card-text Some info about the project
+          div.tags
+           button.btn.btn-sm.btn-outline-light(disabled) HTML/CSS
+           button.btn.btn-sm.btn-outline-light(disabled) NODE
+           button.btn.btn-sm.btn-outline-light(disabled) EXPRESS
+           button.btn.btn-sm.btn-outline-light(disabled) VUE
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+      div.row
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+     div.tab-content(id='nav-tabContent')
+     div(class='tab-pane fade', id='nav-cpp', role='tabpanel', aria-labelledby='nav-cpp-tab')
+      div.row
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title C++ 1
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+       div.col-md-3
+        div.card
+         img.card-img-top(src='...', alt='Card image cap')
+         div.card-body
+          h5.card-title Title
+          p.card-text Some info about the project
+          a.btn.btn-primary(href='') View Code
+          a.btn.btn-primary(href='') See Demo
+   hr.my-4

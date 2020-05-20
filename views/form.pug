@@ -1,0 +1,13 @@
+form.container-fluid(action='/contact', id='contact-form', method='post', role='form')
+ div.form-group
+  div.row(id='row')
+   div.col-sm-6(id='formName')
+    label(for='name') Name
+    input.form-control.form-control-sm(type='text', name='name', placeholder='John', style='width: 50%;')
+   div.col-sm-6(id='submit')
+    button(id='submitBtn', type='submit', class='btn btn-primary btn-lg') Send!
+ div.form-group
+  label(for='contactInfo') Best Way to reach you
+  input.form-control.form-control-sm(type='text', name='contactInfo', placeholder='Email or Phone number', style='width: 50%;')
+  label(for='msg') Message
+  textarea.form-control(name="msg", rows="4", placeholder="I've got an idea for a project...")

@@ -29,8 +29,16 @@ a {
   margin-top: 7vh;
 }
 
+.navbar {
+  margin: auto;
+}
+
 .navbar-brand a img {
   background-color: transparent;
+}
+
+.navbar-brand {
+  margin-left: 0;
 }
 
 #logoBtn:hover {
@@ -84,7 +92,6 @@ a {
 }
 
 .card {
-  margin: auto;
   margin-bottom: 4vh;
   padding: 1vh;
 }
@@ -167,6 +174,86 @@ a {
   padding: 0;
 }
 
+.caret {
+  margin-top: 0;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border: 30px solid transparent;
+  border-top-color: #121212;
+}
+
+.caret-top {
+  height: 1vh;
+  margin-bottom: 0;
+  background-color: #121212;
+}
+
+.c1 {
+  margin-left: 12%;
+}
+
+.c2 {
+  margin-left: 30%;
+}
+
+.c3 {
+  margin-left: 30%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#workCard {
+  height: 23em;
+}
+
+#footFormHeader {
+  margin-left: 2vh;
+}
+
+#blueButton {
+  color: #007bff;
+}
+
+#blueButton:hover {
+  color: white;
+}
+
+#msgLabel {
+  margin-top: 3vh;
+}
+
+.modal-header {
+  display: inline-block;
+  width: 96.5%;
+  margin-bottom: 1vh;
+  padding-bottom: 0;
+}
+
+.modal-title {
+  margin-left: 0;
+}
+
+.tags {
+  margin-bottom: 2vh;
+}
+
+.devicon-css3-plain-wordmark,
+.devicon-html5-plain-wordmark,
+.devicon-express-original,
+.devicon-nodejs-plain,
+.devicon-angularjs-plain,
+.devicon-vuejs-plain-wordmark,
+.devicon-react-original,
+.devicon-mongodb-plain-wordmark,
+.devicon-bootstrap-plain {
+  font-size: 2rem;
+}
+
+
 
 
 
@@ -185,17 +272,6 @@ a {
 
 .dark-mode .modal-content {
   background-color: #292929;
-}
-
-.modal-header {
-  display: inline-block;
-  width: 96.5%;
-  margin-bottom: 1vh;
-  padding-bottom: 0;
-}
-
-.modal-title {
-  margin-left: 0;
 }
 
 .dark-mode .close {
@@ -241,184 +317,31 @@ a {
   color: white;
 }
 
-/* Dark-mode timeline */
-.dark-mode .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+.dark-mode .caret-top {
+  color: white;
 }
 
-.dark-mode .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
+.dark-mode .caret {
+  margin-top: 0;
   width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #292929;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #292929;
-}
-
-.dark-mode .right::before {
-  content: " ";
   height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid #292929;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #292929 transparent transparent;
+  display: inline-block;
+  border: 30px solid transparent;
+  border-top-color: white;
 }
 
-
-/* The actual content */
-.dark-mode .content {
-  padding: 20px 30px;
-  background-color: #292929;
-  position: relative;
-  border-radius: 6px;
+.dark-mode #blueButton {
+  color: white;
 }
 
 
 
-
-
-
-/* Timeline */
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: black;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.containerT {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* Place the container to the left */
-.left {
-  left: -25%;
-}
-
-/* Place the container to the right */
-.right {
-  left: 25%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #e3e5e6;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #e3e5e6;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid #e3e5e6;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #e3e5e6 transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: #e3e5e6;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-
-  /* Place the timelime to the left */
-  .timeline::after {
-    margin-right: 80%;
-  }
-
-  /* Full-width containers */
-  .containerT {
-    width: 60%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  /* Make sure that all arrows are pointing leftwards */
-  .containerT::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after,
-  .right::after {
-    left: 15px;
-  }
-
-  /* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
-}
-
-
-
+/* Media queries */
 @media only screen and (max-width: 1200px) {
   form {
     width: 100%;
   }
 }
-
-
-
-
 
 
 /* Starting at medium size */

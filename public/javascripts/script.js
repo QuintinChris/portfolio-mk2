@@ -7,12 +7,16 @@ const body = document.body;
 const nav = document.getElementById('navbar');
 const logo = document.getElementById('logo');
 const toggleBtn = document.getElementById('toggleDark');
-var hireBtn = document.getElementById('hirebtn');
-var formBtn = document.getElementById('formBtn');
+const hireBtn = document.getElementById('hirebtn');
+const formBtn = document.getElementById('formBtn');
+
+hireBtn.addEventListener('click', (e) => {
+    $('#myModal').modal('show');
+});
 
 
 function toggle() {
-    // from light to dark
+    // from dark to light
     if (body.classList == 'dark-mode') {
         toggleBtn.classList = 'fas fa-toggle-off fa-2x';
         toggleBtn.style.color = 'black';
@@ -27,7 +31,7 @@ function toggle() {
         // Change button class
         hireBtn.classList = 'btn btn-warning btn-sm';
 
-    } else { // from dark to light
+    } else { // from light to dark
         toggleBtn.classList = 'fas fa-toggle-on fa-2x';
         toggleBtn.style.color = 'white';
         body.classList = 'dark-mode';
@@ -51,7 +55,7 @@ workLink.addEventListener('click', function () {
     document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
 });
 portfolioLink.addEventListener('click', function () {
-    document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth', });
+    document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
 });
 homeLink.addEventListener('click', function () {
     window.scroll({

@@ -11,9 +11,9 @@ block content
        hr.my-4(id='line1')
        h5(id='connect') Let's Connect!
        div(id='icons')
-        a(href='', id='icon', class='fab fa-linkedin fa-2x')
-        a(href='', id='icon', class='fab fa-github fa-2x')
-        a(href='', id='icon', class='fab fa-codepen fa-2x')
+        a(href='https://www.linkedin.com/in/chris-quintin/', id='icon', class='fab fa-linkedin fa-2x', target="_blank", rel="noopener noreferrer")
+        a(href='https://github.com/QuintinChris', id='icon', class='fab fa-github fa-2x', target="_blank", rel="noopener noreferrer")
+        a(href='https://codepen.io/chrisquintin', id='icon', class='fab fa-codepen fa-2x', target="_blank", rel="noopener noreferrer")
       div.col-lg-6(id='favs')
        h3.display-4(id='favHeader') My Favorite Projects:
        hr
@@ -40,35 +40,36 @@ block content
    div(id='work')
    div.container-fluid
     h1.display-5(id='header') Work and Education
-    hr.my-4(width='75%')
-    div.timeline
-     div(class='containerT left')
-      div.content
-       div.card
-        h3.card-header 2020
-        h5.card-title Searching for Employment!
-        div.card-body
-         p Hire me to work with your team and we can build quality projects together!
-         a.btn.btn-primary(href='#') See my resume
-         a.btn.btn-primary(data-toggle="modal", data-target="#modal") Contact me!
-     div(class='containerT right')
-      div.content
-       div.card
-        h3.card-header May 2020
-        h5.card-title Bachelor's of Applied Science - EFSC
-        div.card-body
-         p I graduated in May 2020 from Eastern Florida State College with a Bachelor's Degree specializing in Software Programming. My coursework included...
-         a.btn.btn-primary(href='#') See some projects
-     div(class='containerT left')
-      div.content
-       div.card
-        h3.card-header January - May 2020
-        h5.card-title IRI, The CoSort Company
-        div.card-body
-         p At IRI, my task was to complete a series of dashboards that can read data from numerious proprietary programs and transform that data into a graphical user interface. This enabled users to gain a better understanding of their data, faster than they could before.
-         a.btn.btn-primary(disabled) View Code
-         a.btn.btn-primary(href='') View blog post
+    hr.caret-top
+    .caret.c1
+    .caret.c2
+    .caret.c3
+   .row
+    .col-md-4
+     div.card(id='workCard')
+      h3.card-header 2020
+      h5.card-title Searching for Employment!
+      div.card-body
+       p Hire me to work with your team and we can build quality projects together!
+       a.btn.btn-outline-primary(id='blueButton', href='#') See my resume
+       a.btn.btn-outline-primary(id='blueButton', data-toggle="modal", data-target="#myModal") Contact me!
+    .col-md-4
+     div.card(id='workCard')
+      h3.card-header May 2020
+      h5.card-title Bachelor's of Applied Science - EFSC
+      div.card-body
+       p I graduated in May 2020 from Eastern Florida State College with a Bachelor's Degree specializing in Software Programming. My coursework included...
+       a.btn.btn-outline-primary(id='blueButton', href='#') See some projects
+    .col-md-4
+     div.card(id='workCard')
+      h3.card-header January - May 2020
+      h5.card-title IRI, The CoSort Company
+      div.card-body
+       p At IRI, my task was to complete a series of dashboards that can read data from numerious proprietary programs and transform that data into a graphical user interface. This enabled users to gain a better understanding of their data, faster than they could before.
+       a.btn.btn-outline-primary(id='blueButton') View Code
+       a.btn.btn-outline-primary(id='blueButton', href='') View blog post
    div(id='portfolio')
+   // Projects
    div.container-fluid
     h1.display-5(id='header') Projects
     hr.my-4(width='75%')
@@ -80,7 +81,7 @@ block content
     div.tab-content(id='nav-tabContent')
      div(class='tab-pane fade', id='nav-java', role='tabpanel', aria-labelledby='nav-java-tab')
       div.row
-       div.col-md-3
+       div.col-md-4
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
@@ -88,7 +89,7 @@ block content
           p.card-text Some info about the project
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
-       div.col-md-3
+       div.col-md-4
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
@@ -96,15 +97,7 @@ block content
           p.card-text Some info about the project
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
+       div.col-md-4
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
@@ -118,76 +111,54 @@ block content
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
-          h5.card-title Title JS 1
+          h5.card-title Node/Express App
           p.card-text Some info about the project
           div.tags
-           button.btn.btn-sm.btn-outline-light(disabled) HTML/CSS
-           button.btn.btn-sm.btn-outline-light(disabled) NODE
-           button.btn.btn-sm.btn-outline-light(disabled) EXPRESS
-           button.btn.btn-sm.btn-outline-light(disabled) VUE
+           i.devicon-express-original
+           i.devicon-css3-plain-wordmark.colored
+           i.devicon-html5-plain-wordmark.colored
+           i.devicon-nodejs-plain.colored
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
        div.col-md-3
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
-          h5.card-title Title
+          h5.card-title Angular Project
           p.card-text Some info about the project
+          div.tags
+           i.devicon-angularjs-plain.colored
+           i.devicon-nodejs-plain.colored
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
        div.col-md-3
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
-          h5.card-title Title
+          h5.card-title Vue.js Project
           p.card-text Some info about the project
+          div.tags
+           i.devicon-bootstrap-plain.colored
+           i.devicon-vuejs-plain-wordmark.colored
+           i.devicon-nodejs-plain.colored
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
        div.col-md-3
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
-          h5.card-title Title
+          h5.card-title React Project
           p.card-text Some info about the project
+          div.tags
+           i.devicon-react-original.colored
+           i.devicon-mongodb-plain-wordmark.colored
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
       div.row
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
      div.tab-content(id='nav-tabContent')
      div(class='tab-pane fade', id='nav-cpp', role='tabpanel', aria-labelledby='nav-cpp-tab')
       div.row
-       div.col-md-3
+       div.col-md-6
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
@@ -195,23 +166,7 @@ block content
           p.card-text Some info about the project
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
-        div.card
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          h5.card-title Title
-          p.card-text Some info about the project
-          a.btn.btn-primary(href='') View Code
-          a.btn.btn-primary(href='') See Demo
-       div.col-md-3
+       div.col-md-6
         div.card
          img.card-img-top(src='...', alt='Card image cap')
          div.card-body
@@ -220,3 +175,4 @@ block content
           a.btn.btn-primary(href='') View Code
           a.btn.btn-primary(href='') See Demo
    hr.my-4
+    

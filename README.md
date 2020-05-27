@@ -5,6 +5,7 @@ TODO:
 - [ ] MAKE FORM WORK
     -validation, sanitization
     -toast on submit
+    -reset form
 
 - [ ] HTTPS/DEPLOY
     -figure out git repo with domain

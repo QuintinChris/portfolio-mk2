@@ -3,14 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var bodyParser = require('body-parser');
 const { body } = require('express-validator');
 var nodemailer = require('nodemailer');
 
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -26,64 +24,65 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('/public'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 
-// Validating form info
-if (body('name').isLength({ min: 2 })) {
-  let name = req.body.name;
-}
-if (body('contactInfo').isEmail().normalizeEmail() || body('contactInfo').isMobilePhone()) {
-  let contactMethod = req.body.contactInfo;
-}
-if (body('msg').not().isEmpty().trim().escape()) {
-  let message = req.body.msg;
-}
+/*
+fetch('/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
 
-
-// Is 404 error because we need this?
-//app.get('/contact');
-
+  })
+});
+*/
 
 // POST route from contact form
 app.post('/contact', (req, res) => {
 
-  const GMAIL_USER = process.env.GMAIL_USER;
-  const GMAIL_PASS = process.env.GMAIL_PASS;
+  let name = req.body.name;
+  let contactMethod = req.body.contactInfo;
+  let message = req.body.msg;
 
-  // Instantiate the SMTP server
-  const smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: GMAIL_USER,
-      pass: GMAIL_PASS
+  // Validation
+  if (name.isLength({ min: 2 }) &&
+    (contactMethod.isEmail().normalizeEmail() || contactMethod.isMobilePhone()) &&
+    message.not().isEmpty().trim().escape()) {
+
+    // Instantiate the SMTP server
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      secure: true,
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
+      }
+    })
+
+    // Specify what the email will look like
+    const mailOpts = {
+      from: 'form@chrisquintin.com',
+      to: 'cwq23drexel@gmail.com',
+      subject: 'New message from chrisquintin.com',
+      text: 'From: ' + name + '\nContact Method: ' + contactMethod + '\nMessage: ' + message
     }
-  })
 
-  // Specify what the email will look like
-  const mailOpts = {
-    from: 'Your sender info here', // This is ignored by Gmail
-    to: GMAIL_USER,
-    subject: 'New message from contact form at chrisquintin.com',
-    text: 'From: ' + name + '\n Contact: ' + contactMethod + '\n Message: ' + msg
-    //text: `${req.body.name} (${req.body.contactinfo}) says: ${req.body.msg}`
+    // Attempt to send the email
+    transporter.sendMail(mailOpts, (error, info) => {
+      if (error) {
+        // Show a page indicating failure
+        console.log(error);
+      }
+      else {
+        // Show a page indicating success
+        console.log('Email Sent: ' + info.response);
+      }
+    });
+
+    res.render('index');
   }
 
-  // Attempt to send the email
-  smtpTrans.sendMail(mailOpts, (error, response) => {
-    if (error) {
-      // Show a page indicating failure
-      //res.render('contact-failure');
-      console.log('Error Sending Message');
-    }
-    else {
-      // Show a page indicating success
-      //res.render('contact-success');
-      console.log('Message Sent!');
-    }
-  });
 });
 
 

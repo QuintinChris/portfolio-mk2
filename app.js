@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-const { body, validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body } = require('express-validator');
+var nodemailer = require('nodemailer');
 
 require('dotenv').config();
 
@@ -29,7 +29,23 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // contact form handler
-app.get('/contact', (req, res) => {
+app.post('/contact', [
+  body('name').isLength({ min: 2 }),
+  body('contact').isEmail().normalizeEmail() || body('contact').isMobilePhone(),
+  body('msg').not().isEmpty().trim().escape()
+], (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(422).json({ errors: errors.array() });
+  }
+
+  let transporter = nodemailer.createTransport(options[, defaults])
+
+
+
+
+
+
 
 });
 

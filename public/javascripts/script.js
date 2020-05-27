@@ -8,7 +8,6 @@ const nav = document.getElementById('navbar');
 const logo = document.getElementById('logo');
 const toggleBtn = document.getElementById('toggleDark');
 const hireBtn = document.getElementById('hirebtn');
-const formBtn = document.getElementById('formBtn');
 
 hireBtn.addEventListener('click', (e) => {
     $('#myModal').modal('show');
@@ -51,6 +50,7 @@ let workLink = document.getElementById('workLink');
 let portfolioLink = document.getElementById('portfolioLink');
 let homeLink = document.getElementById('homeLink');
 let logoBtn = document.getElementById('logoBtn');
+let contactBtn = document.getElementById('blueButton-contactBtn');
 workLink.addEventListener('click', function () {
     document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
 });
@@ -68,4 +68,10 @@ logoBtn.addEventListener('click', function () {
         top: 0,
         behavior: "smooth"
     });
+});
+hireBtn.addEventListener('click', function () {
+    document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
+});
+contactBtn.addEventListener('click', function () {
+    document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
 });

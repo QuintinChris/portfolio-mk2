@@ -222,6 +222,14 @@ a {
   color: white;
 }
 
+#blueButton-contactBtn {
+  color: #007bff;
+}
+
+#blueButton-contactBtn:hover {
+  color: white;
+}
+
 #msgLabel {
   margin-top: 3vh;
 }
@@ -238,6 +246,8 @@ a {
 }
 
 .tags {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2vh;
 }
 
@@ -334,6 +344,9 @@ a {
   color: white;
 }
 
+.dark-mode #blueButton-contactBtn {
+  color: white;
+}
 
 
 /* Media queries */
@@ -348,10 +361,6 @@ a {
 @media only screen and (max-width: 992px) {
   #intro {
     text-align: center;
-  }
-
-  #name {
-    white-space: nowrap;
   }
 
   #line1 {
@@ -424,7 +433,6 @@ a {
   }
 
   #name {
-    font-size: 16vh;
     padding-bottom: 4vh;
   }
 

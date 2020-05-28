@@ -1,11 +1,9 @@
 TODO:
-- [ ] MAKE RESPONSIVE
-    timeline, toggle
-
-- [ ] MAKE FORM WORK
+- [ ] FORM
     -validation, sanitization
     -toast on submit
     -reset form
+    -don't reload page
 
 - [ ] HTTPS/DEPLOY
     -figure out git repo with domain
@@ -16,6 +14,8 @@ TODO:
 STRETCH-GOALS:
  better timeline
  modal for contact-me buttons
+  try to make codepen with working modal in pug, utilize pug-bootstrap library
+ whatever other styling changes you wanna make
  
 
 
@@ -32,4 +32,3 @@ from bootstrap:
 #6c757d
 others:
 #292929
-

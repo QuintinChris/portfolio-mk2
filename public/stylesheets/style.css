@@ -29,16 +29,8 @@ a {
   margin-top: 7vh;
 }
 
-.navbar {
-  margin: auto;
-}
-
 .navbar-brand a img {
   background-color: transparent;
-}
-
-.navbar-brand {
-  margin-left: 0;
 }
 
 #logoBtn:hover {
@@ -132,14 +124,6 @@ a {
   text-align: center;
 }
 
-#nav-tab {
-  margin-bottom: 2vh;
-}
-
-.nav-tabs .nav-link {
-  color: #121212;
-}
-
 #footer {
   display: flex;
   flex-direction: row;
@@ -162,16 +146,6 @@ a {
 
 #connect2 {
   text-align: center;
-}
-
-#colorModeNav {
-  padding-top: 2vh;
-  visibility: hidden;
-}
-
-#colorMode {
-  margin-left: 0;
-  padding: 0;
 }
 
 .caret {
@@ -263,6 +237,9 @@ a {
   font-size: 2rem;
 }
 
+#smallHr {
+  visibility: hidden;
+}
 
 
 
@@ -424,12 +401,9 @@ a {
     align-self: center;
   }
 
-  #colorMode {
-    display: none;
-  }
-
-  #colorModeNav {
-    visibility: visible;
+  #toggleDark {
+    margin-top: 1vh;
+    margin-right: 2vh;
   }
 
   #name {
@@ -452,8 +426,32 @@ a {
     width: 50%;
   }
 
-  #footFormHeader {
-    font-size: 10vh;
+  .caret-top {
+    visibility: hidden;
+    display: none;
+  }
+
+  .caret {
+    visibility: hidden;
+    display: none;
+  }
+
+  .dark-mode .caret {
+    visibility: hidden;
+    display: none;
+  }
+
+  .dark-mode .caret-top {
+    visibility: hidden;
+    display: none;
+  }
+
+  #smallHr {
+    visibility: visible;
+  }
+
+  #icon {
+    margin-right: 1vh;
   }
 }
 

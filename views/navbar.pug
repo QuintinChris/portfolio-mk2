@@ -1,11 +1,11 @@
 body
  nav(id='navbar', class="navbar sticky-top navbar-expand-sm navbar-light bg-light")
-  a(class="navbar-brand", id="logoBtn")
+  a(class="navbar-brand d-flex", id="logoBtn")
    img(id="logo", height="30px", width="30px", src="/images/cqBlack.png")
   button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
     span(class='navbar-toggler-icon')
   div(class='collapse navbar-collapse', id='navbarSupportedContent')
-   ul(class='navbar-nav mr-auto')
+   ul(class='nav navbar-nav ml-auto mr-0 w-35 justify-content-end')
     li(class='nav-item')
      a(class='nav-link', id='homeLink') Home
       span(class='sr-only')
@@ -15,5 +15,6 @@ body
      a(class='nav-link', id='portfolioLink') Portfolio
     li(class='nav-item')
      button(id="hirebtn", type="button", class="btn btn-outline-warning btn-sm", data-toggle="modal", data-target="#modal") Contact Me!
-  div(id='colorMode')
-   button(id="toggleDark", type="button", class="fas fa-toggle-off fa-2x", onClick='toggle()' alt='Toggle Dark Mode')
+    li(class='nav-item')
+     button(id="toggleDark", type="button", class="fas fa-toggle-off fa-2x", onClick='toggle()' alt='Toggle Dark Mode', style='margin-left: 2vh;')
+  

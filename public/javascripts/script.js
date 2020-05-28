@@ -9,11 +9,6 @@ const logo = document.getElementById('logo');
 const toggleBtn = document.getElementById('toggleDark');
 const hireBtn = document.getElementById('hirebtn');
 
-hireBtn.addEventListener('click', (e) => {
-    $('#myModal').modal('show');
-});
-
-
 function toggle() {
     // from dark to light
     if (body.classList == 'dark-mode') {
@@ -45,7 +40,6 @@ function toggle() {
 
 
 // Smooth scroll for nav links
-// CREATE ID='work/portfolio/home' DIVS
 let workLink = document.getElementById('workLink');
 let portfolioLink = document.getElementById('portfolioLink');
 let homeLink = document.getElementById('homeLink');
@@ -75,3 +69,16 @@ hireBtn.addEventListener('click', function () {
 contactBtn.addEventListener('click', function () {
     document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+
+/*
+Make modal, toast work
+
+hireBtn.addEventListener('click', (e) => {
+    $('#myModal').modal('show');
+});
+
+$('#submitBtn').on('click', '.toast-trigger');
+$('body').on('click', '.toast-trigger', handleToastAction);
+*/

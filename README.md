@@ -5,8 +5,8 @@ TODO:
     -reset form
     -don't reload page
 
-- [ ] HTTPS/DEPLOY
-    -figure out git repo with domain
+- [ ] HTTPS secure
+    
 
 
 

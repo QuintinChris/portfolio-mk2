@@ -2,41 +2,16 @@ extends layout
 
 block content
   div.container-fluid(id='home')
-   div(id="jumbos")
-    div.jumbotron
-     div.row
-      div.col-lg-6(id='intro')
-       h1.display-1(id='name') Hi, I'm Chris
-       p.lead Software engineer aspiring to develop apps and services that impact people around the globe
-       hr.my-4(id='line1')
-       h5(id='connect') Let's Connect!
-       div(id='icons')
-        a(href='https://www.linkedin.com/in/chris-quintin/', id='icon', class='fab fa-linkedin fa-2x', target="_blank", rel="noopener noreferrer")
-        a(href='https://github.com/QuintinChris', id='icon', class='fab fa-github fa-2x', target="_blank", rel="noopener noreferrer")
-        a(href='https://codepen.io/chrisquintin', id='icon', class='fab fa-codepen fa-2x', target="_blank", rel="noopener noreferrer")
-      div.col-lg-6(id='favs')
-       h3.display-4(id='favHeader') My Favorite Projects:
-       hr
-       div.container(id='cardrow')
-        div.card
-         h6.card-header New!
-         h5.card-title Odin Book
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          a.btn.btn-primary(href='#') See Demo
-          a.btn.btn-primary(href='#') View Code
-        div.card
-         h5.card-title Vue Reddit Clone
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          a.btn.btn-primary(href='#') See Demo
-          a.btn.btn-primary(href='#') View Code
-        div.card
-         h5.card-title React Monopoly
-         img.card-img-top(src='...', alt='Card image cap')
-         div.card-body
-          a.btn.btn-primary(href='#') See Demo
-          a.btn.btn-primary(href='#') View Code
+   div.jumbotron
+    div.row
+     div.col-lg-10(id='intro')
+      h1.display-1(id='name') Hi, I'm Chris
+      p.lead Software engineer aspiring to develop apps and services that impact people around the globe
+      hr.my-4(id='line1')
+      div(id='icons')
+       a(href='https://www.linkedin.com/in/chris-quintin/', id='icon', class='fab fa-linkedin fa-5x', target="_blank", rel="noopener noreferrer")
+       a(href='https://github.com/QuintinChris', id='icon', class='fab fa-github fa-5x', target="_blank", rel="noopener noreferrer")
+       a(href='https://codepen.io/chrisquintin', id='icon', class='fab fa-codepen fa-5x', target="_blank", rel="noopener noreferrer")
    div(id='work')
    div.container-fluid
     h1.display-5(id='header') Work and Education
@@ -68,69 +43,44 @@ block content
       h5.card-title Searching for Employment!
       div.card-body
        p Hire me to work with your team and we can build quality projects together!
-       a.btn.btn-outline-primary(id='blueButton', href='https://www.dropbox.com/s/7onr3l07w37tdb3/chrisQuintinResume20.docx?dl=0', target="_blank", rel="noopener noreferrer") View resume
+       a.btn.btn-outline-primary(id='blueButton', href='https://www.dropbox.com/s/3hkta1ezwhkzh7z/chrisQuintinResume20.docx?dl=0', target="_blank", rel="noopener noreferrer") View resume
        a.btn.btn-outline-primary(id='blueButton-contactBtn', data-toggle="modal", data-target="#myModal") Contact me
    div(id='portfolio')
    // Projects
    div.container-fluid
     h1.display-5(id='header') Projects
     hr.my-4(width='75%')
-    div.row
-     div.col-md-3
-      div.card
-       img.card-img-top(src='...', alt='Card image cap')
-       div.card-body
-        h5.card-title Node/Express App
-        p.card-text Some info about the project
-        div.tags
-         i.devicon-express-original
-         i.devicon-css3-plain-wordmark.colored
-         i.devicon-html5-plain-wordmark.colored
-         i.devicon-nodejs-plain.colored
-       div.card-footer
-        a.btn.btn-primary(href='', style='margin-right: 1vh;') View Code
-        a.btn.btn-primary(href='') See Demo
-     div.col-md-3
-      div.card
-       img.card-img-top(src='...', alt='Card image cap')
-       div.card-body
-        h5.card-title Angular Project
-        p.card-text Project built using a MEAN stack
-        div.tags
-         i.devicon-mongodb-plain-wordmark.colored
-         i.devicon-express-original
-         i.devicon-angularjs-plain.colored
-         i.devicon-nodejs-plain.colored
-       div.card-footer
-        a.btn.btn-primary(href='', style='margin-right: 1vh;') View Code
-        a.btn.btn-primary(href='') See Demo
-     div.col-md-3
-      div.card
-       img.card-img-top(src='...', alt='Card image cap')
-       div.card-body
-        h5.card-title Vue.js Project
-        p.card-text Project built using a MEVN stack
-        div.tags
-         i.devicon-mongodb-plain-wordmark.colored
-         i.devicon-express-original
-         i.devicon-vuejs-plain-wordmark.colored
-         i.devicon-nodejs-plain.colored
-       div.card-footer
-        a.btn.btn-primary(href='', style='margin-right: 1vh;') View Code
-        a.btn.btn-primary(href='') See Demo
-     div.col-md-3
-      div.card
-       img.card-img-top(src='...', alt='Card image cap')
-       div.card-body
-        h5.card-title React Project
-        p.card-text Project built using a MERN stack
-        div.tags
-         i.devicon-mongodb-plain-wordmark.colored
-         i.devicon-express-original
-         i.devicon-react-original.colored
-         i.devicon-nodejs-plain.colored
-       div.card-footer
-        a.btn.btn-primary(href='', style='margin-right: 1vh;') View Code
-        a.btn.btn-primary(href='') See Demo
+    div.col-lg-9
+     div.card
+      .card-header(style='padding: 0;')
+       h4.card-title OdinBook
+      img.card-img-top(src='https://cdn.vox-cdn.com/thumbor/7Q_udmIpgfbmR5dguivGUkbM5QI=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19819048/News_Feed.jpg', alt='Card image cap')
+      div.card-body
+       p.card-text A Facebook clone built using a Node/Express backend and utilizing MongoDB for database purposes. This app replicates most basic features of a social media app, such as creating and liking posts, adding comments, friending other users. You can also use real Facebook or Github credentials to sign-in.
+      div.btns
+       a.btn.btn-lg.btn-primary(href='https://github.com/QuintinChris/odinBook', style='margin-right: 1vh;', target="_blank", rel="noopener noreferrer") View Code
+       a.btn.btn-lg.btn-primary(href='', target="_blank", rel="noopener noreferrer") See Demo
+      div.card-footer
+       div.card-icons
+        i.devicon-html5-plain-wordmark.colored
+        i.devicon-css3-plain-wordmark.colored
+        i.devicon-nodejs-plain.colored
+        i.devicon-express-original
+        i.devicon-mongodb-plain-wordmark.colored
+     div.col-lg-9
+     div.card
+      .card-header(style='padding: 0;')
+       h4.card-title SpaceX Mission Client
+      img.card-img-top(src='/images/spacex-app.JPG', alt='Card image cap')
+      div.card-body
+       p.card-text A fun PWA built on Angular and TypeScript utilizing the SpaceX GraphQL API to display recent launches. This project was my first utilizing a GraphQL API, and it was cool to see the capabilities that lie within the SpaceX API.
+      div.btns
+       a.btn.btn-lg.btn-primary(href='https://github.com/QuintinChris/spacex-app', style='margin-right: 1vh;', target="_blank", rel="noopener noreferrer") View Code
+       a.btn.btn-lg.btn-primary(href='https://spacexapp-2f2ae.web.app/', target="_blank", rel="noopener noreferrer") See Demo
+      div.card-footer
+       div.card-icons
+        i.devicon-typescript-plain.colored
+        i.devicon-angularjs-plain.colored
+        i.devicon-nodejs-plain.colored
    hr.my-4
     

@@ -12,7 +12,7 @@ const hireBtn = document.getElementById('hirebtn');
 function toggle() {
     // from dark to light
     if (body.classList == 'dark-mode') {
-        toggleBtn.classList = 'fas fa-toggle-off fa-2x';
+        toggleBtn.classList = 'fas fa-moon fa-2x';
         toggleBtn.style.color = 'black';
         body.classList = '';
 
@@ -26,7 +26,7 @@ function toggle() {
         hireBtn.classList = 'btn btn-warning btn-sm';
 
     } else { // from light to dark
-        toggleBtn.classList = 'fas fa-toggle-on fa-2x';
+        toggleBtn.classList = 'far fa-sun fa-2x';
         toggleBtn.style.color = 'white';
         body.classList = 'dark-mode';
 
@@ -40,14 +40,10 @@ function toggle() {
 
 
 // Smooth scroll for nav links
-let workLink = document.getElementById('workLink');
 let portfolioLink = document.getElementById('portfolioLink');
 let homeLink = document.getElementById('homeLink');
 let logoBtn = document.getElementById('logoBtn');
 let contactBtn = document.getElementById('blueButton-contactBtn');
-workLink.addEventListener('click', function () {
-    document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
-});
 portfolioLink.addEventListener('click', function () {
     document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
 });

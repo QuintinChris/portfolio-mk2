@@ -5,51 +5,37 @@ block content
    div.jumbotron
     div.row
      div.col-lg-10(id='intro')
-      h1.display-1(id='name') Hi, I'm Chris
-      p.lead Software engineer aspiring to develop apps and services that impact people around the globe
+      h1.display-1(id='name', style='margin-bottom: 3vh;') Hi, I'm Chris
+      p.lead(style='padding-bottom: 3vh;') Software engineer aspiring to develop apps and services that impact people around the globe
       hr.my-4(id='line1')
-      div(id='icons')
+      div(id='icons', style='margin-top: 10vh;')
        a(href='https://www.linkedin.com/in/chris-quintin/', id='icon', class='fab fa-linkedin fa-5x', target="_blank", rel="noopener noreferrer")
        a(href='https://github.com/QuintinChris', id='icon', class='fab fa-github fa-5x', target="_blank", rel="noopener noreferrer")
        a(href='https://codepen.io/chrisquintin', id='icon', class='fab fa-codepen fa-5x', target="_blank", rel="noopener noreferrer")
-   div(id='work')
-   div.container-fluid
-    h1.display-5(id='header') Work and Education
-    hr(id='smallHr')
-    hr.caret-top
-    .caret.c1
-    .caret.c2
-    .caret.c3
-   .row
-    .col-md-4
-     div.card(id='workCard')
-      h3.card-header January - May 2020
-      h5.card-title IRI, The CoSort Company
-      div.card-body
-       p At IRI, my task was to complete a series of dashboards that can read data from numerious proprietary programs and transform that data into a graphical user interface. This enabled users to gain a better understanding of their data, faster than they could before.
-       a.btn.btn-outline-primary.disabled(id='blueButton') View Code 
-        i.far.fa-eye-slash
-       a.btn.btn-outline-primary(id='blueButton', href='https://www.dropbox.com/s/9zpk92e6e4n31ck/IRI-blog.docx?dl=0', target="_blank", rel="noopener noreferrer") View blog post
-    .col-md-4
-     div.card(id='workCard')
-      h3.card-header May 2020
-      h5.card-title Bachelor's of Applied Science - EFSC
-      div.card-body
-       p I graduated in May 2020 from Eastern Florida State College with a Bachelor's Degree specializing in Software Programming. My coursework included Database Design & Architecture, Android Application Development, Advanced C++, OOP with Java, IT Project Management, and more.
-       a.btn.btn-outline-primary(id='blueButton', href='https://github.com/QuintinChris?tab=repositories', target="_blank", rel="noopener noreferrer") See some projects
-    .col-md-4
-     div.card(id='workCard')
-      h3.card-header 2020
-      h5.card-title Searching for Employment!
-      div.card-body
-       p Hire me to work with your team and we can build quality projects together!
-       a.btn.btn-outline-primary(id='blueButton', href='https://www.dropbox.com/s/3hkta1ezwhkzh7z/chrisQuintinResume20.docx?dl=0', target="_blank", rel="noopener noreferrer") View resume
-       a.btn.btn-outline-primary(id='blueButton-contactBtn', data-toggle="modal", data-target="#myModal") Contact me
-   div(id='portfolio')
+       a(href='https://www.dropbox.com/s/3hkta1ezwhkzh7z/chrisQuintinResume20.docx?dl=0', id='icon', class='far fa-file-alt fa-5x', target="_blank", rel="noopener noreferrer")
+      div(id='portfolio')
    // Projects
    div.container-fluid
-    h1.display-5(id='header') Projects
+    h1.display-5(id='header', style='margin-top: 10vh;') Projects
     hr.my-4(width='75%')
+    div.col-lg-9
+     div.card
+      .card-header(style='padding: 0;')
+       h4.card-title IRI Data Security Dashboard
+      img.card-img-top(src='/images/IRI2.JPG', alt='Card image cap')
+      div.card-body
+       p.card-text At IRI I developed a series of dashboards to interface with their proprietary data warehousing tool. These dashboards allow companies to ensure the integrity and security of their users data. This project required heavy use of JavaScript to create an interactive front-end and read data from a JSON API on the backend.
+      div.btns
+       a.btn.btn-lg.btn-primary.disabled(id='blueButton', style='margin-right: 1vh;') View Code 
+        i.far.fa-eye-slash
+       a.btn.btn-lg.btn-primary(href='https://www.dropbox.com/s/9zpk92e6e4n31ck/IRI-blog.docx?dl=0', target="_blank", rel="noopener noreferrer") View Blog
+      div.card-footer
+       div.card-icons
+        i.devicon-javascript-plain.colored
+        i.devicon-bootstrap-plain.colored
+        i.devicon-nodejs-plain.colored
+        i.devicon-express-original
+        i.devicon-mongodb-plain-wordmark.colored
     div.col-lg-9
      div.card
       .card-header(style='padding: 0;')

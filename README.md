@@ -1,3 +1,2 @@
-** My Portfolio Website **
-
-#Visit at https://chrisquintin.com
+**My Portfolio Website**
+#Visit at https://www.chrisquintin.com

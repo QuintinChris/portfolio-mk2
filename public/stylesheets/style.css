@@ -2,10 +2,10 @@
   box-sizing: border-box;
   margin: auto;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: black;
   overflow-x: hidden;
   padding-bottom: 3vh;
@@ -27,6 +27,11 @@ a {
 #header {
   text-align: center;
   margin-top: 7vh;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .navbar-brand a img {
@@ -119,6 +124,10 @@ a {
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+}
+
+#intro p {
+  font-family: 'Poppins', sans-serif;
 }
 
 #connect {
@@ -265,21 +274,15 @@ a {
   visibility: hidden;
 }
 
-.fa-sun:hover {
+.far.fa-lightbulb:hover {
   transform: scale(1.1);
 }
 
-.fa-moon,
-.fa-sun {
-  transition: all .2s ease-in-out;
-}
-
-.fa-moon:hover {
+.fas.fa-lightbulb:hover {
   transform: scale(1.1);
 }
 
-
-
+/* //////////////////////////////////////////////////////////////////////////// */
 /* DARK MODE */
 
 .dark-mode {
@@ -366,6 +369,16 @@ a {
   max-width: 60%;
   box-shadow: 0px 0px 5px white;
 }
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
 
 /* Media queries */
 @media only screen and (max-width: 1200px) {

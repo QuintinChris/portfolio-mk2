@@ -12,7 +12,7 @@ const hireBtn = document.getElementById('hirebtn');
 function toggle() {
     // from dark to light
     if (body.classList == 'dark-mode') {
-        toggleBtn.classList = 'fas fa-moon fa-2x';
+        toggleBtn.classList = 'fas fa-lightbulb fa-2x';
         toggleBtn.style.color = 'black';
         body.classList = '';
 
@@ -26,7 +26,7 @@ function toggle() {
         hireBtn.classList = 'btn btn-warning btn-sm';
 
     } else { // from light to dark
-        toggleBtn.classList = 'far fa-sun fa-2x';
+        toggleBtn.classList = 'far fa-lightbulb fa-2x';
         toggleBtn.style.color = 'white';
         body.classList = 'dark-mode';
 
@@ -65,16 +65,3 @@ hireBtn.addEventListener('click', function () {
 contactBtn.addEventListener('click', function () {
     document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
 });
-
-
-
-/*
-Make modal, toast work
-
-hireBtn.addEventListener('click', (e) => {
-    $('#myModal').modal('show');
-});
-
-$('#submitBtn').on('click', '.toast-trigger');
-$('body').on('click', '.toast-trigger', handleToastAction);
-*/
